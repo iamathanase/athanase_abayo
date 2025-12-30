@@ -612,7 +612,7 @@
         }
         
         scrollToProject(projectId) {
-            const projectCard = document.querySelector(`[data-project-id="${projectId}"]`);
+            const projectCard = document.getElementById(`project-${projectId}`);
             if (projectCard) {
                 const nav = document.getElementById('navigation');
                 const navHeight = nav ? nav.offsetHeight : 0;
