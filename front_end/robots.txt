@@ -1,0 +1,22 @@
+# Robots.txt for Athanase Portfolio
+# https://athanase.dev
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://athanase.dev/sitemap.xml
+
+# Disallow admin/api paths
+Disallow: /api/
+Disallow: /admin/
+
+# Allow search engines to crawl all public content
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay for polite bots
+Crawl-delay: 1

@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build outputs
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+back_end/logs/*.log
+
+# Cache
+cache/
+back_end/cache/*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Database dumps
+*.sql.gz
+*.sql.bak
+
+# Sensitive files
+config.local.php
+*.pem
+*.key
+
+# Uploaded files
+uploads/
+back_end/uploads/
+
+# Test coverage
+coverage/
+
+# Package manager locks (optional - uncomment if needed)
+# package-lock.json
+# composer.lock

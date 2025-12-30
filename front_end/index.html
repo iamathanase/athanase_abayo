@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Athanase - Software Engineer & Cybersecurity Specialist. Building systems that think, scale, and defend.">
+    <meta name="keywords" content="software engineer, cybersecurity, system architect, web developer, security engineer, portfolio">
+    <meta name="author" content="Athanase">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://athanase.dev/">
+    <meta property="og:title" content="Athanase | System Architect & Security Engineer">
+    <meta property="og:description" content="I build systems that think, scale, and defend. Software engineer with a computer science foundation and a cybersecurity mindset.">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    <meta property="og:site_name" content="Athanase Portfolio">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Athanase | System Architect & Security Engineer">
+    <meta name="twitter:description" content="I build systems that think, scale, and defend.">
+    <meta name="twitter:image" content="assets/images/og-image.jpg">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#00f0ff">
+    <meta name="msapplication-TileColor" content="#0a0a0f">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Athanase.dev">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://athanase.dev/">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Athanase",
+        "jobTitle": "System Architect & Security Engineer",
+        "description": "Software engineer with a computer science foundation and a cybersecurity mindset. Building systems that think, scale, and defend.",
+        "url": "https://athanase.dev",
+        "sameAs": [
+            "https://github.com/iamathanase",
+            "https://linkedin.com/in/iamathanase",
+            "https://twitter.com/iamathanase"
+        ],
+        "knowsAbout": [
+            "Software Engineering",
+            "System Architecture",
+            "Cybersecurity",
+            "Computer Science",
+            "Web Development",
+            "API Development"
+        ]
+    }
+    </script>
+    
+    <title>Athanase | System Architect & Security Engineer</title>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <span class="text-white">athanase</span><span class="gradient-text">.dev</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+            <div class="preloader-text font-mono">Initializing system...</div>
+        </div>
+    </div>
+
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+    
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navigation" class="navigation">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo" onclick="scrollToTop(event)">
+                <span class="text-white">athanase</span><span class="gradient-text">.dev</span>
+                <span class="cursor-blink"></span>
+            </a>
+            <div class="nav-links">
+                <a href="#identity" class="nav-link animated-underline">Identity</a>
+                <a href="#domains" class="nav-link animated-underline">Domains</a>
+                <a href="#projects" class="nav-link animated-underline">Projects</a>
+                <a href="#mindset" class="nav-link animated-underline">Mindset</a>
+                <a href="#contact" class="nav-link animated-underline">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="container">
+                <a href="#identity" class="mobile-nav-link">Identity</a>
+                <a href="#domains" class="mobile-nav-link">Domains</a>
+                <a href="#projects" class="mobile-nav-link">Projects</a>
+                <a href="#mindset" class="mobile-nav-link">Mindset</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-gradient-overlay"></div>
+            <div class="hero-radial-glow"></div>
+            <div class="container hero-content">
+                <div class="terminal-tag animate-fade-up">
+                    <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="4 17 10 11 4 5"></polyline>
+                        <line x1="12" y1="19" x2="20" y2="19"></line>
+                    </svg>
+                    <span class="font-mono">system.architect <span class="text-primary">|</span> security.engineer</span>
+                </div>
+                <h1 class="hero-title animate-fade-up delay-100">
+                    <span class="text-white">I build systems that</span>
+                    <br>
+                    <span class="gradient-text typing-effect" id="typingText">think, scale, and defend.</span>
+                </h1>
+                <p class="hero-subtitle animate-fade-up delay-200">
+                    Software engineer with a computer science foundation and a cybersecurity mindset.
+                    <br class="hidden-mobile">
+                    Designing resilient systems for a fragile world.
+                </p>
+                <button class="hero-cta animate-fade-up delay-300" onclick="scrollToSection('identity')">
+                    <span>Explore the Mind</span>
+                    <svg class="icon chevron-down" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="scroll-indicator animate-float">
+                    <div class="scroll-mouse">
+                        <div class="scroll-dot"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-side-left font-mono">v1.0.0</div>
+            <div class="hero-side-right">
+                <div class="side-line"></div>
+                <span class="font-mono">scroll</span>
+                <div class="side-line"></div>
+            </div>
+        </section>
+
+        <!-- Identity Section -->
+        <section id="identity" class="section identity-section">
+            <div class="identity-bg-accent"></div>
+            <div class="container">
+                <div class="identity-grid">
+                    <div class="identity-story reveal-on-scroll">
+                        <div class="section-header">
+                            <span class="section-tag font-mono">// IDENTITY</span>
+                            <h2 class="section-title">
+                                Not what I do.
+                                <br>
+                                <span class="gradient-text">How I think.</span>
+                            </h2>
+                        </div>
+                        <div class="identity-text">
+                            <p class="text-lg">I don't just write code. I architect systems that anticipate failure, resist attack, and scale under pressure.</p>
+                            <p>My journey began with curiosity about how things break—and evolved into a discipline of building things that don't. Computer science gave me the foundation. Cybersecurity gave me the lens. Engineering gives me the craft.</p>
+                            <p>I believe technology should be <span class="text-white font-medium">resilient</span>, <span class="text-white font-medium">ethical</span>, and <span class="text-white font-medium">future-proof</span>. Every system I design carries this philosophy.</p>
+                        </div>
+                        <div class="identity-stats">
+                            <div class="stat-item">
+                                <div class="stat-value gradient-text" data-count="5">0</div>
+                                <div class="stat-label">Years of Study</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value gradient-text" data-count="20">0</div>
+                                <div class="stat-label">Projects Built</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value gradient-text">∞</div>
+                                <div class="stat-label">Systems to Master</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="principles-grid">
+                        <div class="principle-card glass-card reveal-on-scroll">
+                            <div class="principle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></div>
+                            <h3 class="principle-title">Systems Thinking</h3>
+                            <p class="principle-desc">Every line of code exists within a larger system. I design with the whole in mind.</p>
+                        </div>
+                        <div class="principle-card glass-card reveal-on-scroll" style="animation-delay: 100ms">
+                            <div class="principle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                            <h3 class="principle-title">Security-First</h3>
+                            <p class="principle-desc">Defense is not an afterthought. It is the foundation of resilient architecture.</p>
+                        </div>
+                        <div class="principle-card glass-card reveal-on-scroll" style="animation-delay: 200ms">
+                            <div class="principle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+                            <h3 class="principle-title">Scalable Design</h3>
+                            <p class="principle-desc">Building for today while engineering for tomorrow's complexity.</p>
+                        </div>
+                        <div class="principle-card glass-card reveal-on-scroll" style="animation-delay: 300ms">
+                            <div class="principle-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+                            <h3 class="principle-title">Deliberate Simplicity</h3>
+                            <p class="principle-desc">Complexity is easy. Elegant simplicity requires mastery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Domains Section -->
+        <section id="domains" class="section domains-section">
+            <div class="grid-pattern"></div>
+            <div class="container">
+                <div class="text-center mb-16 reveal-on-scroll">
+                    <span class="section-tag font-mono">// DOMAINS OF MASTERY</span>
+                    <h2 class="section-title">Skills as <span class="gradient-text">disciplines</span>,<br>not checklists.</h2>
+                </div>
+                <div class="domain-selector">
+                    <button class="domain-btn active" data-domain="software">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        <span>Software Engineering</span>
+                    </button>
+                    <button class="domain-btn" data-domain="cs">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 2a10 10 0 0 1 10 10"></path><path d="M12 12l8.5-8.5"></path></svg>
+                        <span>Computer Science</span>
+                    </button>
+                    <button class="domain-btn" data-domain="security">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        <span>Cybersecurity</span>
+                    </button>
+                </div>
+                <div class="domain-content glass-card reveal-on-scroll">
+                    <div class="domain-grid">
+                        <div class="domain-info">
+                            <div class="domain-header">
+                                <div class="domain-icon" id="domainIcon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                </div>
+                                <div>
+                                    <h3 class="domain-title" id="domainTitle">Software Engineering</h3>
+                                    <p class="domain-subtitle" id="domainSubtitle">Architecture & Systems</p>
+                                </div>
+                            </div>
+                            <p class="domain-description" id="domainDescription">Designing maintainable, scalable software systems with clean architecture principles.</p>
+                            <div class="skills-container">
+                                <h4 class="font-mono text-primary text-sm mb-4">// Core Competencies</h4>
+                                <div id="skillBars"></div>
+                            </div>
+                        </div>
+                        <div class="domain-tools">
+                            <h4 class="font-mono text-primary text-sm mb-4">// Tools & Technologies</h4>
+                            <div class="tools-grid" id="toolsGrid"></div>
+                            <div class="terminal-visual">
+                                <div class="terminal-header">
+                                    <div class="terminal-dot red"></div>
+                                    <div class="terminal-dot yellow"></div>
+                                    <div class="terminal-dot green"></div>
+                                    <span class="terminal-title font-mono" id="terminalTitle">athanase@system:~/software</span>
+                                </div>
+                                <div class="terminal-body font-mono" id="terminalBody"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="projects-bg-accent"></div>
+            <div class="container">
+                <div class="text-center mb-16 reveal-on-scroll">
+                    <span class="section-tag font-mono">// SELECTED WORK</span>
+                    <h2 class="section-title">Projects that <span class="gradient-text">prove</span><br>the thinking.</h2>
+                    <p class="section-subtitle">Not just what was built, but why. Each project represents a problem solved through deliberate architecture.</p>
+                </div>
+                <div class="projects-grid" id="projectsGrid"></div>
+                <div class="text-center mt-12 reveal-on-scroll">
+                    <a href="https://github.com/iamathanase" target="_blank" rel="noopener noreferrer" class="github-link">
+                        <span>View all repositories on GitHub</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mindset Section -->
+        <section id="mindset" class="section mindset-section">
+            <div class="mindset-glow"></div>
+            <div class="container">
+                <div class="text-center mb-16 reveal-on-scroll">
+                    <span class="section-tag font-mono text-destructive">// CYBERSECURITY MINDSET</span>
+                    <h2 class="section-title">The <span class="text-destructive">adversarial</span><br>perspective.</h2>
+                    <p class="section-subtitle">Security isn't a department or a checklist. It's a way of thinking that permeates every decision, every design, every line of code.</p>
+                </div>
+                <div class="mindset-terminal glass-card reveal-on-scroll">
+                    <div class="terminal-header">
+                        <div class="terminal-dot red"></div>
+                        <div class="terminal-dot yellow"></div>
+                        <div class="terminal-dot green"></div>
+                        <span class="terminal-title font-mono">athanase@security:~/philosophy</span>
+                    </div>
+                    <div class="terminal-body font-mono">
+                        <div class="terminal-line"><span class="text-destructive">$</span> <span class="text-muted">cat threat_model.txt</span></div>
+                        <div class="terminal-quote">"The question is not <span class="text-destructive font-semibold">if</span> your system will be attacked, but <span class="text-destructive font-semibold">when</span>. And when it is, will it bend, or will it break? I build systems that bend."</div>
+                        <div class="terminal-line"><span class="text-destructive">$</span> <span class="cursor-blink">_</span></div>
+                    </div>
+                </div>
+                <div class="mindset-grid" id="mindsetGrid"></div>
+                <div class="ethics-note reveal-on-scroll">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <span>All security research conducted ethically and within legal boundaries.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="contact-glow"></div>
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="text-center mb-16 reveal-on-scroll">
+                        <span class="section-tag font-mono">// CONNECT</span>
+                        <h2 class="section-title">Building something that<br><span class="gradient-text">must not fail?</span></h2>
+                        <p class="section-subtitle text-xl">Let's talk.</p>
+                    </div>
+                    <div class="contact-grid">
+                        <div class="contact-form-wrapper glass-card reveal-on-scroll">
+                            <form id="contactForm" class="contact-form">
+                                <div class="form-group">
+                                    <label class="form-label font-mono">// NAME</label>
+                                    <input type="text" name="name" class="form-input" placeholder="Your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label font-mono">// EMAIL</label>
+                                    <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label font-mono">// MESSAGE</label>
+                                    <textarea name="message" class="form-textarea" placeholder="Tell me about your project..." rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn" id="submitBtn">
+                                    <span>Send Message</span>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="contact-info reveal-on-scroll">
+                            <div class="info-card glass-card">
+                                <p class="text-lg">I'm always interested in hearing about projects that require <span class="text-primary font-medium">robust architecture</span>, <span class="text-accent font-medium">security-first thinking</span>, and <span class="text-primary font-medium">systems that scale</span>.</p>
+                            </div>
+                            <div class="response-time">
+                                <div class="pulse-dot"></div>
+                                <span>Typical response time: <span class="text-white font-medium">24-48 hours</span></span>
+                            </div>
+                            <div class="social-section">
+                                <span class="font-mono text-primary text-xs mb-4 block">// ELSEWHERE</span>
+                                <div class="social-grid">
+                                    <a href="https://github.com/iamathanase" target="_blank" rel="noopener noreferrer" class="social-link">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                        <span>GitHub</span>
+                                        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                                    </a>
+                                    <a href="https://linkedin.com/in/iamathanase" target="_blank" rel="noopener noreferrer" class="social-link">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                        <span>LinkedIn</span>
+                                        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                                    </a>
+                                    <a href="https://twitter.com/iamathanase" target="_blank" rel="noopener noreferrer" class="social-link">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                                        <span>Twitter</span>
+                                        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                                    </a>
+                                    <a href="mailto:contact@athanase.dev" class="social-link"></a>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                        <span>Email</span>
+                                        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="availability-card">
+                                <span class="font-mono text-muted text-xs">Current Status</span>
+                                <p class="text-lg font-medium mt-2">Open to <span class="gradient-text">opportunities</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo font-mono">
+                    <span class="text-white">athanase</span><span class="gradient-text">.dev</span>
+                </div>
+                <p class="footer-quote">"The best systems are invisible until you need them—and unbreakable when you do."</p>
+                <div class="footer-copyright font-mono">© <span id="currentYear"></span> Athanase. All rights reserved.</div>
+            </div>
+            <div class="footer-bottom">
+                <span class="font-mono text-muted text-xs">Designed & built with precision.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <svg class="toast-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span class="toast-message"></span>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Single Combined Script -->
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+# Apache Configuration for Backend
+# Deny access to sensitive files
+
+# Deny access to config files
+<FilesMatch "^(config|database)\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Deny access to log files
+<FilesMatch "\.(log|sql)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Deny access to hidden files
+<FilesMatch "^\.">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Deny directory listing
+Options -Indexes
+
+# Enable CORS for API
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>
+
+# Rewrite rules for clean URLs
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Handle OPTIONS requests
+    RewriteCond %{REQUEST_METHOD} OPTIONS
+    RewriteRule ^(.*)$ $1 [R=200,L]
+</IfModule>
