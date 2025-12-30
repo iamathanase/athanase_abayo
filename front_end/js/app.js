@@ -13,6 +13,22 @@
     const PROJECTS_DATA = [
         {
             id: 1,
+            title: 'Novamo',
+            subtitle: 'Affiliate Marketing Platform',
+            category: 'Enterprise / Commerce',
+            positioning: 'A production-grade global affiliate platform with enterprise-level features.',
+            problem: 'Affiliate platforms lack comprehensive admin controls, advanced authentication, and AI-driven insights.',
+            solution: 'Developed enterprise platform with dual dashboards, OAuth + 2FA authentication, and AI-powered analytics.',
+            architecture: 'Microservices approach with admin/user separation, real-time analytics pipeline, and multi-provider auth.',
+            impact: 'Enterprise-ready affiliate infrastructure',
+            stack: ['React', 'Node.js', 'OAuth 2.0', '2FA', 'AI Analytics'],
+            icon: 'globe',
+            gradient: 'from-accent to-destructive',
+            liveUrl: 'https://novamo.vercel.app/index.html',
+            githubUrl: 'https://github.com/iamathanase/Novamo'
+        },
+        {
+            id: 2,
             title: 'PIN',
             subtitle: 'Poverty Intelligence Network',
             category: 'AI / Social Impact',
@@ -28,7 +44,7 @@
             githubUrl: 'https://github.com/iamathanase/Poverty_Intellligence_Network'
         },
         {
-            id: 2,
+            id: 3,
             title: 'IvCash',
             subtitle: 'Student Loan Management System',
             category: 'FinTech / Security',
@@ -44,7 +60,7 @@
             githubUrl: 'https://github.com/iamathanase/IvCash'
         },
         {
-            id: 3,
+            id: 4,
             title: 'LifePrint',
             subtitle: 'Personal Operating System',
             category: 'Product / Identity',
@@ -60,7 +76,7 @@
             githubUrl: 'https://github.com/iamathanase/LifePrint'
         },
         {
-            id: 4,
+            id: 5,
             title: 'SwapIt',
             subtitle: 'Peer-to-Peer Sharing Platform',
             category: 'Community / Trust Systems',
@@ -74,22 +90,6 @@
             gradient: 'from-primary to-accent',
             liveUrl: 'https://swap-it.wuaze.com',
             githubUrl: 'https://github.com/iamathanase/SwapIt'
-        },
-        {
-            id: 5,
-            title: 'Novamo',
-            subtitle: 'Affiliate Marketing Platform',
-            category: 'Enterprise / Commerce',
-            positioning: 'A production-grade global affiliate platform with enterprise-level features.',
-            problem: 'Affiliate platforms lack comprehensive admin controls, advanced authentication, and AI-driven insights.',
-            solution: 'Developed enterprise platform with dual dashboards, OAuth + 2FA authentication, and AI-powered analytics.',
-            architecture: 'Microservices approach with admin/user separation, real-time analytics pipeline, and multi-provider auth.',
-            impact: 'Enterprise-ready affiliate infrastructure',
-            stack: ['React', 'Node.js', 'OAuth 2.0', '2FA', 'AI Analytics'],
-            icon: 'globe',
-            gradient: 'from-accent to-destructive',
-            liveUrl: 'https://novamo.vercel.app/index.html',
-            githubUrl: 'https://github.com/iamathanase/Novamo'
         },
         {
             id: 6,
