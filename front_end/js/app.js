@@ -536,6 +536,91 @@
             console.log('Projects init called');
             this.renderProjects();
             this.renderMindset();
+            this.populateDropdowns();
+        }
+        
+        populateDropdowns() {
+            // Desktop dropdown
+            const desktopDropdown = document.getElementById('projectsDropdown');
+            if (desktopDropdown) {
+                const dropdownHTML = PROJECTS_DATA.map(p => `
+                    <a href="#project-${p.id}" class="nav-dropdown-item" data-project-id="${p.id}">
+                        <span class="dropdown-icon">${getIcon(p.icon)}</span>
+                        <span class="dropdown-text">
+                            <span class="dropdown-title">${p.title}</span>
+                            <span class="dropdown-subtitle">${p.subtitle}</span>
+                        </span>
+                    </a>
+                `).join('') + `
+                    <div class="nav-dropdown-divider"></div>
+                    <a href="#projects" class="nav-dropdown-all">
+                        <span>View All Projects</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                `;
+                desktopDropdown.innerHTML = dropdownHTML;
+                
+                // Add click handlers for smooth scroll
+                desktopDropdown.querySelectorAll('.nav-dropdown-item').forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const projectId = item.dataset.projectId;
+                        this.scrollToProject(projectId);
+                    });
+                });
+            }
+            
+            // Mobile dropdown
+            const mobileDropdown = document.getElementById('mobileProjectsDropdown');
+            const mobileBtn = document.getElementById('mobileProjectsBtn');
+            
+            if (mobileDropdown) {
+                const mobileHTML = PROJECTS_DATA.map(p => `
+                    <a href="#project-${p.id}" class="mobile-dropdown-item" data-project-id="${p.id}">
+                        <span class="dropdown-icon">${getIcon(p.icon)}</span>
+                        <span>${p.title}</span>
+                    </a>
+                `).join('');
+                mobileDropdown.innerHTML = mobileHTML;
+                
+                // Add click handlers
+                mobileDropdown.querySelectorAll('.mobile-dropdown-item').forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const projectId = item.dataset.projectId;
+                        this.scrollToProject(projectId);
+                        // Close mobile menu
+                        const mobileMenu = document.getElementById('mobileMenu');
+                        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                        if (mobileMenu) mobileMenu.classList.remove('active');
+                        if (mobileMenuBtn) mobileMenuBtn.classList.remove('active');
+                        if (mobileDropdown) mobileDropdown.classList.remove('active');
+                        if (mobileBtn) mobileBtn.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+            
+            // Toggle mobile dropdown
+            if (mobileBtn && mobileDropdown) {
+                mobileBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    mobileBtn.classList.toggle('active');
+                    mobileDropdown.classList.toggle('active');
+                });
+            }
+        }
+        
+        scrollToProject(projectId) {
+            const projectCard = document.querySelector(`[data-project-id="${projectId}"]`);
+            if (projectCard) {
+                const nav = document.getElementById('navigation');
+                const navHeight = nav ? nav.offsetHeight : 0;
+                window.scrollTo({ 
+                    top: projectCard.offsetTop - navHeight - 30, 
+                    behavior: 'smooth' 
+                });
+            }
         }
         
         renderProjects() {
@@ -549,7 +634,7 @@
             console.log('Rendering', PROJECTS_DATA.length, 'projects');
             
             const html = PROJECTS_DATA.map((p, i) => `
-                <div class="project-card reveal-on-scroll" style="animation-delay: ${i * 100}ms">
+                <div class="project-card reveal-on-scroll" data-project-id="${p.id}" id="project-${p.id}" style="animation-delay: ${i * 100}ms">
                     <div class="project-gradient" style="${getGradient(p.gradient)}"></div>
                     <div class="project-content">
                         <div class="project-header">

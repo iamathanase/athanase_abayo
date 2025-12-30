@@ -122,7 +122,13 @@
             <div class="nav-links">
                 <a href="#identity" class="nav-link animated-underline">Identity</a>
                 <a href="#domains" class="nav-link animated-underline">Domains</a>
-                <a href="#projects" class="nav-link animated-underline">Projects</a>
+                <div class="nav-dropdown">
+                    <a href="#projects" class="nav-link animated-underline nav-dropdown-trigger">
+                        Projects
+                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="nav-dropdown-menu" id="projectsDropdown"></div>
+                </div>
                 <a href="#mindset" class="nav-link animated-underline">Mindset</a>
                 <a href="#contact" class="nav-link animated-underline">Contact</a>
             </div>
@@ -136,7 +142,13 @@
             <div class="container">
                 <a href="#identity" class="mobile-nav-link">Identity</a>
                 <a href="#domains" class="mobile-nav-link">Domains</a>
-                <a href="#projects" class="mobile-nav-link">Projects</a>
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-trigger" id="mobileProjectsBtn">
+                        Projects
+                        <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="mobile-dropdown-menu" id="mobileProjectsDropdown"></div>
+                </div>
                 <a href="#mindset" class="mobile-nav-link">Mindset</a>
                 <a href="#contact" class="mobile-nav-link">Contact</a>
             </div>
