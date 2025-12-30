@@ -48,7 +48,10 @@ python -m http.server 8000
 ## 📬 Contact
 
 - GitHub: [@iamathanase](https://github.com/iamathanase)
-- LinkedIn: [athanase002](https://linkedin.com/in/athanase002)
+- LinkedIn: [athanase002](https://www.linkedin.com/in/athanase002/)
+- X / Twitter: [athanase002](https://x.com/athanase002)
+- Facebook: [Athanase002](https://www.facebook.com/Athanase002/)
+- Instagram: [athanase002](https://www.instagram.com/athanase002/)
 - Email: athanase.abayo@gmail.com
 
 ---
