@@ -63,13 +63,13 @@ define('RATE_LIMIT_WINDOW', 3600); // 1 hour
 // Email settings
 define('SMTP_HOST', 'smtp.example.com');
 define('SMTP_PORT', 587);
-define('SMTP_USER', 'contact@athanase.dev');
+define('SMTP_USER', 'athanase.abayo@gmail.com');
 define('SMTP_PASS', '');
-define('SMTP_FROM', 'contact@athanase.dev');
+define('SMTP_FROM', 'athanase.abayo@gmail.com');
 define('SMTP_FROM_NAME', 'Athanase Portfolio');
 
 // Admin email for notifications
-define('ADMIN_EMAIL', 'admin@athanase.dev');
+define('ADMIN_EMAIL', 'athanase.abayo@gmail.com');
 
 // Include database configuration
 require_once __DIR__ . '/database.php';

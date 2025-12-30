@@ -49,7 +49,7 @@ python -m http.server 8000
 
 - GitHub: [@iamathanase](https://github.com/iamathanase)
 - LinkedIn: [athanase002](https://linkedin.com/in/athanase002)
-- Email: contact@athanase.dev
+- Email: athanase.abayo@gmail.com
 
 ---
 
