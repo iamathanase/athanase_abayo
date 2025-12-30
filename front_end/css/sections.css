@@ -1022,6 +1022,42 @@
     opacity: 0.5;
 }
 
+/* Social Icons - Clean circular buttons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(var(--background-rgb), 0.5);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icon svg {
+    color: var(--muted-foreground);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    border-color: var(--primary);
+    background: rgba(var(--primary-rgb), 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 240, 255, 0.2);
+}
+
+.social-icon:hover svg {
+    color: var(--primary);
+}
+
 .availability-card {
     text-align: center;
     padding: 1.5rem;
